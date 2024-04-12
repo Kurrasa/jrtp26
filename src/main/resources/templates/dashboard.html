@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME TO YOUR Dashboard</h1>
+            <table>
+				<tr>
+					<td>total enquires:</td>
+					<td th:if="${dashboard != null}">
+                    <span th:text="${dashboard.totalEnquires}"></span>
+                   </td>
+				</tr>
+				<tr>
+					<td>enrolled enquires:</td>
+					<td th:if="${dashboard != null}">
+                    <span th:text="${dashboard.enrolledEnquires}"></span>
+                   </td>
+				</tr>
+				<tr>
+					<td>lost enquires:</td>
+					<td th:if="${dashboard != null}">
+                    <span th:text="${dashboard.lostEnquires}"></span>
+                   </td>
+				</tr>
+				<tr>
+					<td>open enquires:</td>
+					<td th:if="${dashboard != null}">
+                    <span th:text="${dashboard.openEnquires}"></span>
+                   </td>
+				</tr>
+			</table>
+    </div>
+    <a href="addenquiry">Add New Enquire</a>
+     <a href="viewEnquiry">View Enquire</a><br>
+     
+     <a href="loginform" class="btn btn-danger">logut</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVFQWjxhUVCU5QOLaEY9rFu8BUzyRlI7/mTyYfMoPnTNUo7N5zG8" crossorigin="anonymous"></script>
+</body>
+</html>
